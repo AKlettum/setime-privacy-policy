@@ -1,80 +1,332 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <title>Privacy Policy</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Personvern | SE Time</title>
+
+    <link rel="icon" type="image/png" href="/images/SE_Logo_WT_NoBg.png">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            line-height: 1.6;
-            color: #111;
+        :root {
+            --primary: #ee1c25;
+            --secondary: #c8c9cb;
+            --dark: #111111;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --card: #ffffff;
+            --background: #f5f5f5;
         }
-        h1, h2 {
-            color: #0f172a;
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(238,28,37,0.12), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(238,28,37,0.08), transparent 30%),
+                linear-gradient(to bottom, #ffffff, #f3f4f6);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 32px 24px;
+        }
+
+        .header-inner {
+            max-width: 980px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand-logo {
+            width: 220px;
+            max-width: 70%;
+        }
+
+        .back-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            background: white;
+            padding: 12px 18px;
+            border-radius: 14px;
+            border: 1px solid rgba(238,28,37,0.12);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+
+        main {
+            padding: 20px 24px 70px;
+        }
+
+        .policy-card {
+            max-width: 980px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.88);
+            backdrop-filter: blur(12px);
+            border-radius: 28px;
+            padding: 54px;
+            border: 1px solid rgba(255,255,255,0.7);
+            box-shadow:
+                0 20px 50px rgba(0,0,0,0.08),
+                0 0 60px rgba(238,28,37,0.05);
+        }
+
+        .eyebrow {
+            color: var(--primary);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.8rem;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+            line-height: 1.1;
+            letter-spacing: -2px;
+            color: var(--dark);
+        }
+
+        .updated {
+            margin-top: 16px;
+            color: var(--muted);
+        }
+
+        .intro {
+            margin-top: 34px;
+            font-size: 1.08rem;
+            color: var(--muted);
+            max-width: 760px;
+        }
+
+        section {
+            margin-top: 42px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            color: var(--dark);
+            margin-bottom: 14px;
+        }
+
+        p {
+            margin: 0 0 16px;
+        }
+
+        ul {
+            margin: 12px 0 0;
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight-box {
+            margin-top: 28px;
+            background: linear-gradient(135deg, rgba(238,28,37,0.08), rgba(200,201,203,0.18));
+            border-left: 5px solid var(--primary);
+            padding: 22px 24px;
+            border-radius: 18px;
+        }
+
+        .contact-box {
+            margin-top: 28px;
+            padding: 26px;
+            border-radius: 22px;
+            background: #111111;
+            color: white;
+        }
+
+        .contact-box a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            max-width: 980px;
+            margin: 34px auto 0;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 700px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .policy-card {
+                padding: 34px 24px;
+                border-radius: 22px;
+            }
+
+            h1 {
+                font-size: 2.3rem;
+            }
+
+            .brand-logo {
+                width: 190px;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<h1>Privacy Policy</h1>
+<header>
+    <div class="header-inner">
+        <img
+            class="brand-logo"
+            src="/images/SE_Logo_NoBg_Light.png"
+            alt="SE Time">
 
-<p>Last updated: 2026</p>
+        <a class="back-link" href="/">
+            Til forsiden
+        </a>
+    </div>
+</header>
 
-<h2>Overview</h2>
-<p>
-This application (“SE Time”) is a work management and time tracking system used by organizations.
-To use the app, users must log in with an authorized account.
-</p>
+<main>
+    <article class="policy-card">
 
-<h2>What data we collect</h2>
-<p>We collect the following types of information:</p>
+        <div class="eyebrow">Personvern</div>
 
-<ul>
-    <li>Name and email address</li>
-    <li>Login credentials (securely managed via authentication system)</li>
-    <li>Organization-related data (projects, time registrations, and user assignments)</li>
-    <li>Device and usage information for security and functionality</li>
-</ul>
+        <h1>Privacy Policy</h1>
 
-<h2>How we use data</h2>
-<ul>
-    <li>To authenticate users and provide secure access</li>
-    <li>To assign users to organizations and projects</li>
-    <li>To store and display time registrations and work data</li>
-    <li>To improve app functionality</li>
-</ul>
+        <p class="updated">
+            Last updated: 2026
+        </p>
 
-<h2>Data storage</h2>
-<p>
-All data is stored securely in a cloud database hosted on Microsoft Azure.
-Access is restricted to authenticated users within their organization.
-</p>
+        <p class="intro">
+            SE Time is a work management and time tracking application used by organizations.
+            Login is required to use the application.
+        </p>
 
-<h2>Data sharing</h2>
-<p>
-We do not sell or share personal data with third parties.
-Data is only accessible to users within the same organization where applicable.
-</p>
+        <div class="highlight-box">
+            SE Time is currently available in Norwegian only. This privacy policy is provided in English for clarity and app store review purposes.
+        </div>
 
-<h2>Authentication</h2>
-<p>
-Login is required to use this application. Authentication is handled securely via a backend API.
-</p>
+        <section>
+            <h2>1. Information we collect</h2>
 
-<h2>Your rights</h2>
-<p>
-Users may request deletion or correction of their data by contacting the administrator of their organization.
-</p>
+            <p>
+                We collect the information needed to provide secure access and time tracking functionality.
+            </p>
 
-<h2>Contact</h2>
-<p>
-If you have questions about this privacy policy, contact: <br/>
-<strong>andreas@sondre-eiendom.no</strong>
-</p>
+            <ul>
+                <li>Name and email address</li>
+                <li>Login credentials managed through secure authentication</li>
+                <li>Organization membership and role information</li>
+                <li>Projects, tasks and time registrations</li>
+                <li>Device and login information used for security and authentication</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. How we use information</h2>
+
+            <ul>
+                <li>To authenticate users</li>
+                <li>To manage access to organizations and projects</li>
+                <li>To store and display work time registrations</li>
+                <li>To provide administrative and reporting features</li>
+                <li>To maintain security and reliability of the application</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Data storage and security</h2>
+
+            <p>
+                Data is stored securely using cloud services hosted on Microsoft Azure.
+                Access to data is restricted by authentication, user roles and organization-based data separation.
+            </p>
+
+            <p>
+                Communication between the app and backend services is protected using HTTPS.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. Data sharing</h2>
+
+            <p>
+                We do not sell personal data.
+                Data is only accessible to authorized users within the relevant organization and to platform administrators when required for support, maintenance or administration.
+            </p>
+        </section>
+
+        <section>
+            <h2>5. Account access and deletion</h2>
+
+            <p>
+                Users may request correction or deletion of their account data by contacting their organization administrator or support.
+                Some records may be retained where required for operational, legal or audit purposes.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. Children’s privacy</h2>
+
+            <p>
+                SE Time is not intended for children and is intended for use by organizations and authorized users.
+            </p>
+        </section>
+
+        <section>
+            <h2>7. Changes to this policy</h2>
+
+            <p>
+                This privacy policy may be updated from time to time.
+                Updates will be published on this page.
+            </p>
+        </section>
+
+        <section>
+            <h2>8. Contact</h2>
+
+            <div class="contact-box">
+                <p>
+                    If you have questions about this privacy policy or your data, contact:
+                </p>
+
+                <p>
+                    <a href="mailto:andreas@sondre-eiendom.no">
+                        Contact
+                    </a>
+                </p>
+            </div>
+        </section>
+
+    </article>
+
+    <footer>
+        <p>
+            <a href="/">SE Time</a> · Personvern
+        </p>
+    </footer>
+</main>
 
 </body>
 </html>
